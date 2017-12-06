@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2017.3.1026/styles/kendo.common-material.min.css" /><link rel="stylesheet" href="https://kendo.cdn.telerik.com/2017.3.1026/styles/kendo.material.min.css" /><link rel="stylesheet" href="https://kendo.cdn.telerik.com/2017.3.1026/styles/kendo.material.mobile.min.css" />
+    <link rel="stylesheet" href="pagination.css" />
+    <script src="https://kendo.cdn.telerik.com/2017.3.1026/js/jquery.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2017.3.1026/js/kendo.all.min.js"></script>
+    <script src="pagination.js" ></script>
+    
+</head>
+<body>
+     
+Edit Customer:
+   <button id="btnEdit"><i class="material-icons">mode_edit</i></button>
+    <br/>
+    <br/>
+    <div id = "pagination">
+      <div id="isUserInformationVisible" data-bind="visible: isUserInformationVisible">
+        User Information Here
+      </div>
+      <div id="isUserCustomerMappingVisible" data-bind="visible: isUserCustomerMappingVisible">
+        All Customers Here
+      </div>
+      <div id="isCustomerModuleMappingVisible" data-bind="visible: isCustomerModuleMappingVisible">
+        All Modules Here
+      </div>
+      <br/>
+      <a href="javascript:void(0)" data-bind="events: { click: cancelEditingUser }">Cancel</a>
+      <a href="javascript:void(0)" data-bind="events: { click: showPreviousPanel }, visible: isPreviousVisible">Previous</a>
+      <a href="javascript:void(0)" data-bind="events: { click: showNextPanel }, visible: isNextVisible">Next</a>
+      <a href="javascript:void(0)" data-bind="events: { click: submitUser }, visible: isCustomerModuleMappingVisible">Save</a>
+    </div>
+</body>
+</html>
